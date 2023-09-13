@@ -1,0 +1,6 @@
+name: fav-food
+properties:
+  - name: name
+    type: string
+  - name:  user
+    type: [user]

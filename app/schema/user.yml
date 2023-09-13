@@ -1,5 +1,11 @@
-name: item
+name: user
 properties:
-  - name: title
+  - name: name
     type: string
-
+  - name: surname
+    type: string
+  - name: age
+    type: integer
+  - name: fav-food
+    type: [fav-food]
+    
