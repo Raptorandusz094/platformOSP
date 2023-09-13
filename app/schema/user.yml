@@ -1,0 +1,5 @@
+name: item
+properties:
+  - name: title
+    type: string
+
