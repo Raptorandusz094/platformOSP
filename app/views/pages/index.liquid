@@ -23,3 +23,12 @@
 {% if items.records.total_entries == 0 %}
   <div>There are no items in the list.</div>
 {% endif %}
+
+
+<form action="/user/delete" method="post">
+  <input
+    type="hidden"
+    name="id"
+    value="{{ user.id }}">
+  <button type="submit">Mark as done</button>
+</form>

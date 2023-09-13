@@ -1,0 +1,9 @@
+mutation user_delete ($id:ID!){
+    record:record_delete(
+record:"user"
+id:$id
+)
+{id}
+  
+
+}
