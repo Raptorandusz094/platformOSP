@@ -1,0 +1,17 @@
+mutation user_create(
+  $name : String ,$surname:String, $age:integer
+) {
+  record: record_create(
+    record: {
+      table: "user"
+      properties: [
+        { name: "name", value: $title }
+        {surname:"surname" , value:$surname}
+        {age:"age" , value:$age}
+      ]
+    }
+  ) {
+    id
+    name: property(name: "name")
+  }
+}

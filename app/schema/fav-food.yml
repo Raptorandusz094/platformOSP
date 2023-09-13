@@ -2,5 +2,5 @@ name: fav-food
 properties:
   - name: name
     type: string
-  - name:  user
+  - name:  [user]
     type: [user]

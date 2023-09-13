@@ -6,6 +6,6 @@ properties:
     type: string
   - name: age
     type: integer
-  - name: fav-food
+  - name: [fav-food]
     type: [fav-food]
     
