@@ -1,0 +1,17 @@
+query user_search {
+  records: records(
+    per_page: 100
+    filter: {
+      table: { value: "user" }
+    }
+    sort: {
+      updated_at: { order: DESC }
+    }
+  ) {
+    total_entries
+    results {
+      id
+      name: property(name: "name")
+    }
+  }
+}

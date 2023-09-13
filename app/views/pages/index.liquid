@@ -1,28 +1,25 @@
-<ul>
-	<li>
-		First item
-		<form action="" method="post">
-			<button type="submit">Mark as done</button>
-		</form>
-	</li>
-	<li>
-		Second item
-		<form action="" method="post">
-			<button type="submit">Mark as done</button>
-		</form>
-	</li>
-</ul>
-
 <!-- information shown when the list is empty -->
 <div>There are no items in the list.</div>
 
 <!-- form for adding new item -->
 <form action="user/creat_user.liquid" method="post">
-	<input type="text" name="name">
-	<input type="text" name="surname">
-	<input type="number" name="age">
-	<button type="submit">Add item</button>
+  <input type="text" name="name">
+  <input type="text" name="surname">
+  <input type="number" name="age">
+  <button type="submit">Add item</button>
 </form>
 
 <!-- link to the About Me page -->
 <a href="/about">About Me</a>
+
+{% for user in users.records.results %}
+  <li>
+    {{ user.name }}
+    <form action="">
+      <button type="submit">Mark as done</button>
+    </form>
+  </li>
+{% endfor %}
+{% if items.records.total_entries == 0 %}
+  <div>There are no items in the list.</div>
+{% endif %}
