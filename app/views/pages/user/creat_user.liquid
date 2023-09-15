@@ -5,6 +5,12 @@ method: post
 {% liquid
 	graphql result = 'user/create_user', name: context.params.name , surname: context.params.surname, age:context.param.age
 
+
+	if result.record.id
++		graphql email = 'user/email/created', data: context.params
+		redirect_to '/'
+
+
 	if result.record.id
 		redirect_to '/'
 	else
